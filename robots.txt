@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mehdi-kabiri.github.io/sitemap.xml
