@@ -139,8 +139,10 @@
       position: relative;
       min-height: 365px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 8px 10px 14px;
       overflow: hidden;
       background:
         linear-gradient(145deg, #35291f, #1c1714 75%);
@@ -149,19 +151,38 @@
     }
 
     .visual-frame svg {
+      display: block;
       width: 100%;
-      max-width: 350px;
+      max-width: 330px;
       height: auto;
+      flex: 0 1 auto;
     }
 
     .visual-label {
-      position: absolute;
-      bottom: 18px;
-      left: 20px;
+      position: static;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      width: 100%;
+      margin-top: -2px;
       color: var(--gold-light);
-      font-size: 0.7rem;
-      letter-spacing: 3px;
+      text-align: center;
       text-transform: uppercase;
+      line-height: 1.5;
+      white-space: normal;
+    }
+
+    .visual-label strong {
+      font-size: 0.67rem;
+      letter-spacing: 2.2px;
+      font-weight: 700;
+    }
+
+    .visual-label span {
+      font-size: 0.53rem;
+      letter-spacing: 1.6px;
+      color: var(--gold);
     }
 
     .hero-content {
@@ -667,7 +688,7 @@
       <div class="visual-frame">
 
         <!-- Original vector illustration: transmission grid -->
-        <svg viewBox="0 0 360 390" role="img"
+        <svg viewBox="0 0 360 350" role="img"
              aria-label="Illustration of an electricity transmission network">
 
           <defs>
@@ -737,19 +758,13 @@
             <path d="M180 150 170 245"/>
           </g>
 
-          <g fill="#e4c39d" font-family="Arial, sans-serif"
-             font-size="10" letter-spacing="1">
-             <text x="180" y="365"
-                   text-anchor="middle"
-                   font-size="9"
-                   letter-spacing="1.5">
-               POWER SYSTEMS
-             </text>
-          </g>
-
         </svg>
 
-        <span class="visual-label">Engineering · Research · Innovation</span>
+        <div class="visual-label" aria-label="Power systems: engineering, research and innovation">
+          <strong>Power Systems</strong>
+          <span>Engineering · Research · Innovation</span>
+        </div>
+
       </div>
     </div>
 
